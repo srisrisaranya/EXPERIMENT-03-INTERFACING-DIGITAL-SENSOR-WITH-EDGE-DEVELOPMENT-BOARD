@@ -88,7 +88,7 @@ while True:
 
 ## OUTPUT: 
 <img width="1911" height="949" alt="Screenshot 2025-09-06 161647" src="https://github.com/user-attachments/assets/7c89445d-3ba4-41fa-bc80-7a5f2dd25531" />
-<img width="994" height="880" alt="Screenshot 2025-09-06 161328" src="https://github.com/user-attachments/assets/de841884-a923-4018-9082-72236b938504" />
+
 
 
 ## RESULT:
