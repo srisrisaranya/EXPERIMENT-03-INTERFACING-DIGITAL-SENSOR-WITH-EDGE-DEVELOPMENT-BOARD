@@ -2,10 +2,10 @@
  
 ---
 
-### **NAME:**  
-### **DEPARTMENT:**  
-### **ROLL NO:**  
-### **DATE OF EXPERIMENT:**  
+### NAME: SARANYA S
+### DEPARTMENT: B.E CSE-IOT
+### ROLL NO:  212223110044 
+### DATE OF EXPERIMENT:   
 
 ---
 
@@ -65,21 +65,35 @@ The sensor measures **temperature using a thermistor** and **humidity using a ca
 
 ---
 
-## **PROGRAM (MicroPython)**  
-``` ```
+## PROGRAM (MicroPython):
+```
+import machine
+import dht
+import time
+dht_pin = machine.Pin(2)
+dht_sensor = dht.DHT22(dht_pin)
+while True:
+    try:
+        dht_sensor.measure()
+        temperature_celsius = dht_sensor.temperature()
+        humidity_percent = dht_sensor.humidity()
+        print("Temperature: {:.2f} °C".format(temperature_celsius))
+        print("Humidity: {:.2f} %".format(humidity_percent))
 
----
+    except Exception as e:
+        print("Error reading DHT:", str(e))
+    time.sleep(1)
+```
 
-## **OUTPUT:**  
- 
----
 
-  
----
+## OUTPUT: 
+<img width="1911" height="949" alt="Screenshot 2025-09-06 161647" src="https://github.com/user-attachments/assets/7c89445d-3ba4-41fa-bc80-7a5f2dd25531" />
+<img width="994" height="880" alt="Screenshot 2025-09-06 161328" src="https://github.com/user-attachments/assets/de841884-a923-4018-9082-72236b938504" />
 
-## **RESULT:**  
-The **DHT22 sensor** was successfully interfaced with the **Raspberry Pi Pico**, and real-time **temperature and humidity data** were read and displayed. The LEDs responded correctly when the threshold limits were exceeded.
 
----
+## RESULT:
+The DHT22 sensor was successfully interfaced with the **Raspberry Pi Pico, and real-time **temperature and humidity data were read and displayed. The LEDs responded correctly when the threshold limits were exceeded.
+
+
 
  
